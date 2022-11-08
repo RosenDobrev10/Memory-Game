@@ -32,15 +32,6 @@ function checkAnswer(level) {
     } else {
         playSound("wrong");
         $("body").addClass("game-over");
-        if (level >= 9) {
-            $("h1").html("Excellent Memory<br> Try Again");
-        } else if (level >= 6) {
-            $("h1").html("Very good Memory<br> Try Again");
-        } else if (level >= 3) {
-            $("h1").html("Good Memory<br> Try Again");
-        } else {
-            $("h1").html("Bad Memory<br> Try Again");
-        }
         setTimeout(function () {
             $("body").removeClass("game-over");
         }, 200);
@@ -72,6 +63,15 @@ function animatePress(color) {
 }
 
 function playAgain() {
+    if (level >= 9) {
+        $("h1").html("Excellent Memory<br> Well Done👌");
+    } else if (level >= 6) {
+        $("h1").html("Very good Memory<br> Close To Excellence👋");
+    } else if (level >= 3) {
+        $("h1").html("Good Memory<br> You Can Do Better✊");
+    } else {
+        $("h1").html("Bad Memory<br> Try Again👎");
+    }
     level = 0;
     gamePattern = [];
     isStarted = false;
