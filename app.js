@@ -70,7 +70,7 @@ function playAgain() {
     } else if (level >= 3) {
         $("h1").html("Good Memory<br> You Can Do Better✊");
     } else {
-        $("h1").html("Bad Memory<br> Try Again👎");
+        $("h1").html("Bad Memory<br> Try Again 👎");
     }
     level = 0;
     gamePattern = [];
