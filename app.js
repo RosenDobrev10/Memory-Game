@@ -7,7 +7,6 @@ let level = 0;
 
 $("button").click(function () {
     if (!isStarted) {
-        $("h1").text(`Level ${level}`);
         $("button").fadeOut();
         nextSequence();
         isStarted = true;
@@ -70,7 +69,7 @@ function playAgain() {
     } else if (level >= 3) {
         $("h1").html("Good Memory<br> You Can Do Better✊");
     } else {
-        $("h1").html("Bad Memory<br> Try Again 👎");
+        $("h1").html("Bad Memory<br> Try Again👎");
     }
     level = 0;
     gamePattern = [];
